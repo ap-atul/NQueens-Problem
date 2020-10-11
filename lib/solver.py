@@ -100,7 +100,7 @@ class Solver:
         self.__board.printBoard(currentState)
         return currentState
 
-    def runIterativeHillClimbing(self, iterations=100):
+    def runRandomRestartHillClimbing(self, iterations=100):
         """
         Restarting the board if it gets stuck on the Local M, Default no of
         restarts determined by iterations

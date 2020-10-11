@@ -2,7 +2,7 @@
 Solved using Hill Climbing Heuristic Search technique. This searching is implemented
 using simple HCS, so it may get stuck on Local Maxima.
 
-Iterative HC will restart every time if the HC gets stuck, the default no of iterations
+Random Restart HC will restart every time if the HC gets stuck, the default no of iterations
 can be determined by the iterations parameter
 
 ## Algorithm
@@ -24,7 +24,7 @@ while True
 
 ```
 
-Iterative Hill Climbing Search
+Random Restart Hill Climbing Search
 
 ```
 
