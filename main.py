@@ -1,7 +1,7 @@
 from lib.solver import Solver
 
-solver = Solver(n=10, verbose=False)
-solver.runHillClimbing()
+solver = Solver(n=4, verbose=True)
+solver.runRandomRestartHillClimbing()
 
 print(f"Steps climbed :: {solver.getStepsClimbed()}")
 # print(f"Restarts required :: {solver.getRestarts()}")

@@ -82,14 +82,14 @@ class Solver:
             if not neighbours:
                 break
 
+            if self.__verbose:
+                print(f"Neighbour Board :: [with heuristics {self.__board.calculateHeuristic(currentState)}]")
+                self.__board.printBoard(currentState)
+
             # min heuristic in selected
             neighbour = min(neighbours, key=lambda state: self.__board.calculateHeuristic(state))
             if self.__board.calculateHeuristic(neighbour) >= self.__board.calculateHeuristic(currentState):
                 break
-
-            if self.__verbose:
-                print("Neighbour Board :: ")
-                self.__board.printBoard(currentState)
 
             # updating the current state
             currentState = neighbour
@@ -126,14 +126,14 @@ class Solver:
                 if not neighbours:
                     break
 
+                if self.__verbose:
+                    print(f"Neighbour Board :: [with heuristics {self.__board.calculateHeuristic(currentState)}]")
+                    self.__board.printBoard(currentState)
+
                 # min heuristic in selected
                 neighbour = min(neighbours, key=lambda state: self.__board.calculateHeuristic(state))
                 if self.__board.calculateHeuristic(neighbour) >= self.__board.calculateHeuristic(currentState):
                     break
-
-                if self.__verbose:
-                    print("Neighbour Board :: ")
-                    self.__board.printBoard(currentState)
 
                 # updating the current state
                 currentState = neighbour
